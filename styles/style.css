@@ -11,6 +11,7 @@ html {
 .page {
   display: flex;
   align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -42,7 +43,6 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 133px 30px;
   gap: 30px;
   align-items: center;
   inline-size: 1140px;
@@ -183,13 +183,18 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   block-size: 298px;
   overflow: auto;
   position: relative;
 }
 
 .content__details {
-  inline-size: 399px;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
   block-size: 100%;
 }
 
@@ -239,10 +244,8 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__video-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   justify-content: space-between;
-  gap: 5px;
 }
 
 .content__video-card-description-container {
@@ -268,8 +271,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__video-card-thumbnail {
-  display: flex;
-  inline-size: 194px;
+  min-inline-size: 194px;
   block-size: 103px;
   object-fit: cover;
   object-position: center;
